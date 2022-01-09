@@ -6,6 +6,7 @@ use std::env;
 
 ///The program entry point, parses the command line arguments
 fn main() {
+
     let args: Vec<u64> = env::args()
         .skip(1) //The first item is always the name of program
         .map(|arg| arg.parse().unwrap_or_else(|_| error()))
